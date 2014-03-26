@@ -1,7 +1,5 @@
 void setup()
 {
-  pinMode(5, OUTPUT);
-  pinMode(6, OUTPUT);
   pinMode(7, OUTPUT);
   pinMode(8, OUTPUT);
   pinMode(9, OUTPUT);
@@ -11,63 +9,43 @@ void setup()
   pinMode(13, OUTPUT);
 }
 
-int whichPin = 5;
 void loop()
 {
-  if(whichPin == 5) 
-    digitalWrite(5, HIGH);
-  else
-    digitalWrite(5, LOW);
-
-  if(whichPin == 5) 
-    digitalWrite(5, HIGH);
-  else
-    digitalWrite(5, LOW);
-
-  if(whichPin == 6) 
-    digitalWrite(6, HIGH);
-  else
-    digitalWrite(6, LOW);
-
-  if(whichPin == 7) 
-    digitalWrite(7, HIGH);
-  else
-    digitalWrite(7, LOW);
-
-  if(whichPin == 8) 
-    digitalWrite(8, HIGH);
-  else
-    digitalWrite(8, LOW);
-
-  if(whichPin == 9) 
-    digitalWrite(9, HIGH);
-  else
-    digitalWrite(9, LOW);
-
-  if(whichPin == 10) 
-    digitalWrite(10, HIGH);
-  else
-    digitalWrite(10, LOW);
-
-  if(whichPin == 11) 
-    digitalWrite(11, HIGH);
-  else
-    digitalWrite(11, LOW);
-
-  if(whichPin == 12) 
-    digitalWrite(12, HIGH);
-  else
-    digitalWrite(12, LOW);
-
-  if(whichPin == 13) 
-    digitalWrite(13, HIGH);
-  else
-    digitalWrite(13, LOW);
-
-  whichPin = whichPin + 1;
-  if(whichPin > 13)
-    whichPin = 5;
-    
+  // make the LED on the first pin come on
+  digitalWrite(7, HIGH);  
   delay(100);
+  
+  // turn first one off, second one on
+  digitalWrite(7, LOW);
+  digitalWrite(8, HIGH);
+  delay(100);
+  
+  // turn second one off, third on...
+  digitalWrite(8, LOW);
+  digitalWrite(9, HIGH);
+  delay(100);
+  
+  // and so on..
+  digitalWrite(9, LOW);
+  digitalWrite(10, HIGH);
+  delay(100);
+  
+  // and so on..
+  digitalWrite(10, LOW);
+  digitalWrite(11, HIGH);
+  delay(100);
+  
+  // and so on..
+  digitalWrite(11, LOW);
+  digitalWrite(12, HIGH);
+  delay(100);
+  
+  // and so on..
+  digitalWrite(12, LOW);
+  digitalWrite(13, HIGH);
+  delay(100);
+  
+  // turn the last one off... and round we go again!
+  digitalWrite(13, LOW);
 }
 
