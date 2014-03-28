@@ -119,7 +119,7 @@ void showDigit(int whichPosition, int whichSegments)
 
 void loop()
 {
-  int delayTime = 1;
+  int delayTime = 500;
   showDigit(1, Digit1);
   delay(delayTime);
   showDigit(2, Digit2);
